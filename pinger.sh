@@ -1,6 +1,7 @@
 #! /bin/bash
 
-read -p 'Enter your subnet: ' diap
+diap=$(echo "$(hostname -I | awk -F'.' '{print $1"."$2"."$3}')")
+echo $diap
 
 start=1
 end=254
